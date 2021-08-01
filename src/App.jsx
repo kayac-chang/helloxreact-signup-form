@@ -118,7 +118,7 @@ function Form() {
   }
 
   return (
-    <form className="space-y-4" onSubmit={onSubmit}>
+    <form className="space-y-4 lg:p-6" onSubmit={onSubmit}>
       {fields.map(({ id, label, error, errorMsg }) => (
         <Input key={id} id={id} label={label} error={error && errorMsg} />
       ))}
@@ -138,8 +138,8 @@ function Form() {
 function App() {
   return (
     <div className="min-h-screen px-6 py-20 grid lg:grid-cols-2 place-content-center gap-16 max-w-screen-xl mx-auto">
-      <section className="text-white my-auto text-center lg:text-left space-y-4">
-        <h1 className="text-2.5xl font-bold">
+      <section className="text-white my-auto text-center lg:text-left space-y-4 lg:space-y-8">
+        <h1 className="text-2.5xl lg:text-5xl font-bold">
           Learn to code by watching others
         </h1>
 
@@ -150,7 +150,7 @@ function App() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <div className="space-y-4">
         <Card className="bg-blue">
           <p className="text-white text-center px-12">
             <b>Try it free 7 days</b> then $20/mo. thereafter
@@ -160,7 +160,7 @@ function App() {
         <Card className="bg-white">
           <Form />
         </Card>
-      </section>
+      </div>
     </div>
   );
 }
